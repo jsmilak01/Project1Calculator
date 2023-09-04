@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+<!--creates the TextView object that shows the user what numbers they are inputting and the results to their operations
+it is twice the height of the buttons and is the width of the whole screen except for 2dp margins
+has a weight of 2 so that it is twice the height of nested layouts containing buttons-->
+    <TextView
+        android:id="@+id/textbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="2dp"
+        android:text="0"
+        android:textAlignment="textEnd"
+        android:textSize="80sp"
+        android:textStyle="bold" />
+
+<!--First nested horizontal linear layout contains C,+/-, %, and / buttons-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+<!--"C" button clears the calculator and sets the textview back to 0-->
+        <Button
+            android:id="@+id/clearbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="C"
+            android:textSize="30sp" />
+
+<!--"+/-" button will make an inputted number switch between negative or positive-->
+        <Button
+            android:id="@+id/plusminusbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="+/-"
+            android:textSize="30sp"/>
+
+<!--"%" button divides the inputted number by 100 and displays the result-->
+        <Button
+            android:id="@+id/percentbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="%"
+            android:textSize="30sp"/>
+
+<!--"/" button is used for dividing numbers-->
+        <Button
+            android:id="@+id/dividebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="/"
+            android:textSize="30sp"/>
+
+    </LinearLayout>
+
+<!--    second horizontal linear layout contains 7, 8, 9, and X buttons-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+<!--        "7" button will input the number 7 into the textview-->
+        <Button
+            android:id="@+id/sevenbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="7"
+            android:textSize="30sp" />
+
+<!--        "8" button will input the number 8 into the textview-->
+        <Button
+            android:id="@+id/eightbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="8"
+            android:textSize="30sp"/>
+
+<!--        "9" button will input the number 9 into the textview-->
+        <Button
+            android:id="@+id/ninebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="9"
+            android:textSize="30sp"/>
+
+<!--        "X" button is for multiplying numbers-->
+        <Button
+            android:id="@+id/multiplybutton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="X"
+            android:textSize="30sp"/>
+
+    </LinearLayout>
+
+<!--    third horizontal linear layout contains 4, 5, 6, and - buttons-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/fourbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="4"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/fivebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="5"
+            android:textSize="30sp"/>
+
+        <Button
+            android:id="@+id/sixbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="6"
+            android:textSize="30sp"/>
+
+        <Button
+            android:id="@+id/subtractbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="-"
+            android:textSize="30sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/onebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="1"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/twobutton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="2"
+            android:textSize="30sp"/>
+
+        <Button
+            android:id="@+id/threebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="3"
+            android:textSize="30sp"/>
+
+        <Button
+            android:id="@+id/addbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="+"
+            android:textSize="30sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/zerobutton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_margin="2dp"
+            android:layout_weight="2"
+            android:text="0"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/periodbutton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="."
+            android:textSize="30sp"/>
+
+        <Button
+            android:id="@+id/equalbutton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="="
+            android:textSize="30sp"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

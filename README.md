@@ -11,6 +11,7 @@ The following **required** functionality is completed:
 * The button marked "C" at the top left lets the user reset the text box to 0 and clear all operations and numbers from the calculator
 * The button marked "+/-" allows the user to change numbers from positive to negative
 * The button marked "%" will divide the displayed number by 100 and show the result
+* When turned to landscape mode the calculator will forget all previous inputs and add 5 new buttons on the right side of the screen
 
 The following **extensions** are implemented:
 
